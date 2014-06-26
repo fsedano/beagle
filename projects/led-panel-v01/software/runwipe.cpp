@@ -40,13 +40,13 @@
 #include "wipe.h"
 
 // address register
-#define FPGA_PANEL_ADDR_REG 0x0010
+#define FPGA_PANEL_ADDR_REG 0x0008
 
 // data register
-#define FPGA_PANEL_DATA_REG 0x0012
+#define FPGA_PANEL_DATA_REG 0x0009
 
 // buffer select register
-#define FPGA_PANEL_BUFFER_REG 0x0014
+#define FPGA_PANEL_BUFFER_REG 0x000a
 
 // file descriptor for FPGA memory device
 int gFd = 0;

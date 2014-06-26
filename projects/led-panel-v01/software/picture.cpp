@@ -28,10 +28,10 @@ int main (int argc, char *argv[])
     FILE *fin = fopen (argv[1], "rb");
 
     // set address to buffer 0
-    write16 (0x0010, 0x0000);
+    write16 (0x0008, 0x0000);
 
     // display buffer 0
-    write16 (0x0014, 0x0000);
+    write16 (0x000a, 0x0000);
 
     // read image data from file and write to display
     for (int row = 0; row < 32; row++) {
@@ -43,7 +43,7 @@ int main (int argc, char *argv[])
             g = gammaLut[g];
             b = gammaLut[b];
             uint16_t data = (r<<8) | (g<<4) | b;
-            write16 (0x0012, data);
+            write16 (0x0009, data);
         }
     }
     

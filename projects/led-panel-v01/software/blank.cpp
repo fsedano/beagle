@@ -23,15 +23,15 @@ int main (int argc, char *argv[])
     fd = open ("/dev/logibone_mem", O_RDWR | O_SYNC);
 
     // set address to buffer 0
-    write16 (0x0010, 0x0000);
+    write16 (0x0008, 0x0000);
 
     // display buffer 0
-    write16 (0x0014, 0x0000);
+    write16 (0x000a, 0x0000);
 
     // fill buffer 0 with black
     for (int row = 0; row < 32; row++) {
         for (int col = 0; col < 32; col++) {
-            write16 (0x0012, 0x0000);
+            write16 (0x0009, 0x0000);
         }
     }
     
